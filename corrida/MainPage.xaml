@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="corrida.MainPage"
+             Shell.NavBarIsVisible="false">
+
+   <Grid>
+  <Image Source="fundo.png"
+   Aspect="Fill"/>
+   <Image Source="montanha.png"
+   Aspect="AspectFit"
+   VerticalOptions="End"
+   Margin="0,0,0,60"/>
+   <Image Source="nuvem.png"
+   Aspect="AspectFit"/>
+   <Image Source="gramatras.png"
+   Aspect="AspectFit"
+   VerticalOptions="End"
+   Margin="0,0,0,40"/>
+   <Image Source="arvore.png"
+   Aspect="AspectFit"
+   VerticalOptions="End"/>
+   <Image Source="chao.png"
+    VerticalOptions="End"
+    HorizontalOptions="Start"
+    HeightRequest="75"
+    Aspect="Fill"/>
+   
+   </Grid>
+
+</ContentPage>
