@@ -15,51 +15,51 @@
    </HorizontalStackLayout>
    <HorizontalStackLayout x:Name="HSLayer2">
    <Image Source="montanha.png"
-   Aspect="AspectFit"
+   Aspect="Fill"
    VerticalOptions="End"
    Margin="0,0,0,140"/>
    <Image Source="montanha.png"
-   Aspect="AspectFit"
+   Aspect="Fill"
    VerticalOptions="End"
    Margin="0,0,0,140"/>
    <Image Source="montanha.png"
-   Aspect="AspectFit"
+   Aspect="Fill"
    VerticalOptions="End"
    Margin="0,0,0,140"/>
    </HorizontalStackLayout>
    <HorizontalStackLayout x:Name="HSLayer3">
    <Image Source="nuvem.png"
-   Aspect="AspectFit"/>
+   Aspect="Fill"/>
     <Image Source="nuvem.png"
-   Aspect="AspectFit"/>
+   Aspect="Fill"/>
     <Image Source="nuvem.png"
-   Aspect="AspectFit"/>
+   Aspect="Fill"/>
    </HorizontalStackLayout>
    <HorizontalStackLayout x:Name="HSLayer4">
    <Image Source="gramatras.png"
-   Aspect="AspectFit"
+   Aspect="Fill"
    VerticalOptions="End"
    Margin="0,0,0,120"/>
     <Image Source="gramatras.png"
-   Aspect="AspectFit"
+   Aspect="Fill"
    VerticalOptions="End"
    Margin="0,0,0,120"/>
     <Image Source="gramatras.png"
-   Aspect="AspectFit"
+   Aspect="Fill"
    VerticalOptions="End"
    Margin="0,0,0,120"/>
    </HorizontalStackLayout>
    <HorizontalStackLayout x:Name="HSLayer5">
    <Image Source="arvore.png"
-   Aspect="AspectFit"
+   Aspect="Fill"
    Margin="0,0,0,75"
    VerticalOptions="End"/>
    <Image Source="arvore.png"
-   Aspect="AspectFit"
+   Aspect="Fill"
    Margin="0,0,0,75"
    VerticalOptions="End"/>
    <Image Source="arvore.png"
-   Aspect="AspectFit"
+   Aspect="Fill"
    Margin="0,0,0,75"
    VerticalOptions="End"/>
    </HorizontalStackLayout>
