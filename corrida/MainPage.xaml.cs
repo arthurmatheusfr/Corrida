@@ -8,7 +8,9 @@ public partial class MainPage : ContentPage
 	 int velocidade1 = 0;
 	 int velocidade2 = 0;
 	 int velocidade3 = 0;
-	 int velocidade = 0;
+	 int velocidade4 = 0;
+	 int velocidade5 = 0;
+	 int velocidade6 = 0;
 	 int LarguraJanela = 0;
 	 int AlturaJanela = 0;
 	public MainPage()
@@ -26,7 +28,9 @@ public partial class MainPage : ContentPage
 		velocidade1 = (int)(w * 0.001);
 		velocidade2 = (int)(w * 0.004);
 		velocidade3 = (int)(w * 0.008);
-		velocidade = (int)(w * 0.01);
+		velocidade4 = (int)(w * 0.012);
+		velocidade5 = (int)(w * 0.016);
+		velocidade6 = (int)(w * 0.01);
 	}
 	void CorrigeTamanhoCenario(double w, double h)
 	{
@@ -50,6 +54,47 @@ public partial class MainPage : ContentPage
 		HSLayer5.WidthRequest = w * 1.5;
 		HSLayer6.WidthRequest = w * 1.5;
 	}
-
+	void GerenciaCenario()
+	{
+		MoveCenario();
+		GerenciaCenario(HSLayer1);
+		GerenciaCenario(HSLayer2);
+		GerenciaCenario(HSLayer3);
+		GerenciaCenario(HSLayer4);
+		GerenciaCenario(HSLayer5);
+		GerenciaCenario(HSLayer6);
+	}
+    void MoveCenario()
+	{
+		HSLayer1.TranslationX -= velocidade1;
+		HSLayer2.TranslationX -= velocidade2;
+		HSLayer3.TranslationX -= velocidade3;
+		HSLayer4.TranslationX -= velocidade4;
+		HSLayer5.TranslationX -= velocidade5;
+		HSLayer6.TranslationX -= velocidade6;
+	}
+	void GerenciaCenario(HorizontalStackLayout HSL)
+	{
+		var view = (HSL.Children.First() as Image);
+		if (view.WidthRequest + HSL.TranslationX < 0)
+		{
+			HSL.Children.Remove(view);
+			HSL.Children.Add(view);
+			HSL.TranslationX = view.TranslationX;
+		}
+	}
+	async Task Desenha()
+	{
+		while(!EstaMorto)
+		{
+			GerenciaCenario();
+			await Task.Delay(TempoEntreFrames);
+		}
+	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+		Desenha();
+    }
 }
 
