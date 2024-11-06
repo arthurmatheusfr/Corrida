@@ -96,5 +96,6 @@ public partial class MainPage : ContentPage
         base.OnAppearing();
 		Desenha();
     }
+
 }
 
