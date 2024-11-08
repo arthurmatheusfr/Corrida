@@ -80,6 +80,13 @@
     HeightRequest="75"
     Aspect="Fill"/>
     </HorizontalStackLayout>
+    <Image x:Name="imgPlayer"
+    VerticalOptions="End"
+    Margin="0,0,0,75"
+    HeightRequest="150"
+    WidthRequest="150"
+    HorizontalOptions="Start"
+    Aspect="Fill"/>
    </Grid>
 
 </ContentPage>

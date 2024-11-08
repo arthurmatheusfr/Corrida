@@ -1,10 +1,12 @@
-﻿namespace corrida;
+﻿using Corrida;
+
+namespace corrida;
 
 public partial class MainPage : ContentPage
 {
 	bool EstaMorto = false;
 	bool EstaPulando = false;
-	const int TempoEntreFrames = 25;
+	const int TempoEntreFrames = 100;
 	 int velocidade1 = 0;
 	 int velocidade2 = 0;
 	 int velocidade3 = 0;
@@ -13,9 +15,12 @@ public partial class MainPage : ContentPage
 	 int velocidade6 = 0;
 	 int LarguraJanela = 0;
 	 int AlturaJanela = 0;
+	 Player player;
 	public MainPage()
 	{
 		InitializeComponent();
+		player = new Player(imgPlayer);
+		player.Run();
 	}
     protected override void OnSizeAllocated(double w, double h)
     {
@@ -88,6 +93,7 @@ public partial class MainPage : ContentPage
 		while(!EstaMorto)
 		{
 			GerenciaCenario();
+			player.Desenha();
 			await Task.Delay(TempoEntreFrames);
 		}
 	}
