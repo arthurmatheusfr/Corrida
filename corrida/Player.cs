@@ -5,9 +5,11 @@ public class Player : Animacao
 {
     public Player (Image a): base (a)
     {
-        for (int i = 1; i <= 24; ++i)
+        for (int i = 1; i <= 8; ++i)
         Animacao1.Add($"andar{i.ToString("D2")}.png");
-     SetAnimacaoAtiva(1);
+     for(int i = 1; i < 5; i++)
+        Animacao2.Add($"morte{i.ToString("D2")}.png");
+        SetAnimacaoAtiva(1);
     }
     public void Die()
     {
